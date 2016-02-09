@@ -23,12 +23,18 @@ $(function(){
     guesses += 1;
 
     // YOUR CODE HERE:
+
     // when game over call `tellUser(guesses, value, "turns to guess");
-    // when too high `tellUser(value, "high");
+    if (aNumber === value) {
+        tellUser(guesses, value, "turns to guess");
+    // when too low `tellUser(value, "high");
+  } else if (aNumber < value) {
+        tellUser(value, "high");
     // when too low `tellUser(value, "low");
-    
-
-
+  } else if (aNumber > value) {
+        tellUser(value, "low");
+    }
+    // console.log (value, aNumber, guesses);
     // END OF YOUR CODE
 
     input.val("");
