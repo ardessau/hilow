@@ -53,12 +53,9 @@ $(function(){
     status.prepend(li);
   }
 
-
-
   function getRandom(){
     return Math.floor(Math.random() * 100);
   }
-
 
 
 });
